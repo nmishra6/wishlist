@@ -7,7 +7,6 @@ phases:
     pre_build:
         commands:
             - echo Pre_Build started...
-            - npm run test
             - echo Pre_Build end...
     build:
         commands:
