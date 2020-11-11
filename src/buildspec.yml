@@ -1,25 +1,20 @@
 vwerion:0.1
 
-env:
-  variables:
-    NODE_ENV: "development"
-
 phrases:
     runtime-versions:
       nodejs: 14
     install:
         commands:
             - echo installing Node JS...
-            - npm install -g jest
-            - npm install -g gatsby
+            - npm install
     pre_build:
         commands:
             - echo Pre_Build started...
-            - npm install
+            - npm run test
     build:
         commands:
-            - gatsby build
-            - npm run test
+            - echo Build started...
+            - echo Build ended...
 
 artifacts:
   type: zip
