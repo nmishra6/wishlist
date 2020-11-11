@@ -12,10 +12,6 @@ phases:
         commands:
             - echo Build started...
             - echo Build ended...
-artifacts:
-  type: zip
-  paths:
-    - './build/**/*'
 cache:
   paths:
     - './node_modules/**/*'            
