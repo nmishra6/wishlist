@@ -1,0 +1,27 @@
+vwerion:0.1
+
+phrases:
+    runtime-versions:
+      nodejs: 14
+    install:
+        commands:
+            - echo installing Node JS...
+            - npm install
+    pre_build:
+        commands:
+            - echo Pre_Build started...
+            - npm run test
+    build:
+        commands:
+            - echo Build started...
+            - echo Build ended...
+
+artifacts:
+  type: zip
+  paths:
+    - './build/**/*'
+    
+cache:
+  paths:
+    - './node_modules/**/*'            
+            
