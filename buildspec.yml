@@ -1,0 +1,32 @@
+vwerion:0.1
+
+env:
+  variables:
+    NODE_ENV: "development"
+
+phrases:
+    runtime-versions:
+      nodejs: 14
+    install:
+        commands:
+            - echo installing Node JS...
+            - npm install -g jest
+            - npm install -g gatsby
+    pre_build:
+        commands:
+            - echo Pre_Build started...
+            - npm install
+    build:
+        commands:
+            - gatsby build
+            - npm run test
+
+artifacts:
+  type: zip
+  paths:
+    - './build/**/*'
+    
+cache:
+  paths:
+    - './node_modules/**/*'            
+            
