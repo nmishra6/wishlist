@@ -1,4 +1,4 @@
-vwerion:0.1
+version: 0.1
 phases:
     runtime-versions:
       nodejs: 14
